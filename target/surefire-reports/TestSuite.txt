@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 169.325 s <<< FAILURE! - in TestSuite
+loginTest(com.flipkart.test.LoginPageTest)  Time elapsed: 2.002 s  <<< FAILURE!
+java.lang.AssertionError: expected [My account - My Store] but found [Login - My Store]
+	at com.flipkart.test.LoginPageTest.loginTest(LoginPageTest.java:86)
+
+verifyShoppingCartPage(com.flipkart.test.ShoppingCartPageTest)  Time elapsed: 20.404 s  <<< FAILURE!
+java.lang.NumberFormatException: For input string: "1.0"
+	at com.flipkart.test.ShoppingCartPageTest.verifyShoppingCartPage(ShoppingCartPageTest.java:56)
+

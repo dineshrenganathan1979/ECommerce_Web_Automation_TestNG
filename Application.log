@@ -1,0 +1,265 @@
+2022-03-19 20:48:49,050 DEBUG [main] InternalLoggerFactory:89 - Using Log4J as the default logging framework
+2022-03-19 20:48:49,054 DEBUG [main] ResourceLeakDetector:129 - -Dio.netty.leakDetection.level: simple
+2022-03-19 20:48:49,055 DEBUG [main] ResourceLeakDetector:130 - -Dio.netty.leakDetection.targetRecords: 4
+2022-03-19 20:48:49,058 DEBUG [main] ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@4c432866
+2022-03-19 20:48:49,079 DEBUG [main] PlatformDependent0:460 - -Dio.netty.noUnsafe: false
+2022-03-19 20:48:49,080 DEBUG [main] PlatformDependent0:954 - Java version: 15
+2022-03-19 20:48:49,081 DEBUG [main] PlatformDependent0:135 - sun.misc.Unsafe.theUnsafe: available
+2022-03-19 20:48:49,083 DEBUG [main] PlatformDependent0:159 - sun.misc.Unsafe.copyMemory: available
+2022-03-19 20:48:49,084 DEBUG [main] PlatformDependent0:202 - java.nio.Buffer.address: available
+2022-03-19 20:48:49,086 DEBUG [main] PlatformDependent0:282 - direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:253)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:312)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:247)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88)
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114)
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251)
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224)
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203)
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111)
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90)
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32)
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:103)
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:50)
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:144)
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:107)
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94)
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:85)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:77)
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:35)
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:111)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:104)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:91)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:80)
+	at com.flipkart.base.TestBase.getDriverInstance(TestBase.java:43)
+	at com.flipkart.test.LoginPageTest.setUp(LoginPageTest.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+2022-03-19 20:48:49,089 DEBUG [main] PlatformDependent0:350 - java.nio.Bits.unaligned: available, true
+2022-03-19 20:48:49,091 DEBUG [main] PlatformDependent0:414 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @584f5497
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:385)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:693)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:556)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:375)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:312)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:366)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88)
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114)
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251)
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224)
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203)
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111)
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90)
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32)
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:103)
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:50)
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:144)
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:107)
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94)
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:85)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:77)
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:35)
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:111)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:104)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:91)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:80)
+	at com.flipkart.base.TestBase.getDriverInstance(TestBase.java:43)
+	at com.flipkart.test.LoginPageTest.setUp(LoginPageTest.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+2022-03-19 20:48:49,093 DEBUG [main] PlatformDependent0:446 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2022-03-19 20:48:49,093 DEBUG [main] PlatformDependent:1103 - sun.misc.Unsafe: available
+2022-03-19 20:48:49,106 DEBUG [main] PlatformDependent:1205 - maxDirectMemory: 4257218560 bytes (maybe)
+2022-03-19 20:48:49,107 DEBUG [main] PlatformDependent:1224 - -Dio.netty.tmpdir: C:\Users\Dinesh\AppData\Local\Temp (java.io.tmpdir)
+2022-03-19 20:48:49,107 DEBUG [main] PlatformDependent:1303 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-03-19 20:48:49,107 DEBUG [main] PlatformDependent:1063 - Platform: Windows
+2022-03-19 20:48:49,109 DEBUG [main] PlatformDependent:178 - -Dio.netty.maxDirectMemory: -1 bytes
+2022-03-19 20:48:49,109 DEBUG [main] PlatformDependent:185 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-03-19 20:48:49,110 DEBUG [main] CleanerJava9:71 - java.nio.ByteBuffer.cleaner(): available
+2022-03-19 20:48:49,110 DEBUG [main] PlatformDependent:205 - -Dio.netty.noPreferDirect: false
+2022-03-19 20:48:49,120 DEBUG [main] PlatformDependent:967 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-03-19 20:48:49,134 DEBUG [main] InternalThreadLocalMap:83 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-03-19 20:48:49,134 DEBUG [main] InternalThreadLocalMap:86 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-03-19 20:48:49,169 DEBUG [main] JdkSslContext:97 - Default protocols (JDK): [TLSv1.3, TLSv1.2, TLSv1.1, TLSv1] 
+2022-03-19 20:48:49,169 DEBUG [main] JdkSslContext:98 - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+2022-03-19 20:48:49,189 DEBUG [main] MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 16
+2022-03-19 20:48:49,196 DEBUG [main] NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-03-19 20:48:49,197 DEBUG [main] NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-03-19 20:48:49,208 DEBUG [main] NioEventLoop:260 - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@245a060f
+2022-03-19 20:48:49,209 DEBUG [main] NioEventLoop:260 - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2d6aca33
+2022-03-19 20:48:49,210 DEBUG [main] NioEventLoop:260 - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@29314cc9
+2022-03-19 20:48:49,211 DEBUG [main] NioEventLoop:260 - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@35f8a9d3
+2022-03-19 20:48:49,212 DEBUG [main] NioEventLoop:260 - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@6b1e7ad3
+2022-03-19 20:48:49,213 DEBUG [main] NioEventLoop:260 - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@13a37e2a
+2022-03-19 20:48:49,214 DEBUG [main] NioEventLoop:260 - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1280851e
+2022-03-19 20:48:49,215 DEBUG [main] NioEventLoop:260 - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@56de6d6b
+2022-03-19 20:48:49,215 DEBUG [main] NioEventLoop:260 - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@4fcc0416
+2022-03-19 20:48:49,216 DEBUG [main] NioEventLoop:260 - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1473b8c0
+2022-03-19 20:48:49,217 DEBUG [main] NioEventLoop:260 - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@749f539e
+2022-03-19 20:48:49,218 DEBUG [main] NioEventLoop:260 - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@551de37d
+2022-03-19 20:48:49,219 DEBUG [main] NioEventLoop:260 - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@6075b2d3
+2022-03-19 20:48:49,220 DEBUG [main] NioEventLoop:260 - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@997d532
+2022-03-19 20:48:49,221 DEBUG [main] NioEventLoop:260 - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@6a969fb8
+2022-03-19 20:48:49,222 DEBUG [main] NioEventLoop:260 - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@3028e50e
+2022-03-19 20:48:49,237 DEBUG [main] PooledByteBufAllocator:155 - -Dio.netty.allocator.numHeapArenas: 16
+2022-03-19 20:48:49,237 DEBUG [main] PooledByteBufAllocator:156 - -Dio.netty.allocator.numDirectArenas: 16
+2022-03-19 20:48:49,237 DEBUG [main] PooledByteBufAllocator:158 - -Dio.netty.allocator.pageSize: 8192
+2022-03-19 20:48:49,238 DEBUG [main] PooledByteBufAllocator:163 - -Dio.netty.allocator.maxOrder: 11
+2022-03-19 20:48:49,238 DEBUG [main] PooledByteBufAllocator:167 - -Dio.netty.allocator.chunkSize: 16777216
+2022-03-19 20:48:49,238 DEBUG [main] PooledByteBufAllocator:168 - -Dio.netty.allocator.smallCacheSize: 256
+2022-03-19 20:48:49,238 DEBUG [main] PooledByteBufAllocator:169 - -Dio.netty.allocator.normalCacheSize: 64
+2022-03-19 20:48:49,238 DEBUG [main] PooledByteBufAllocator:170 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-03-19 20:48:49,238 DEBUG [main] PooledByteBufAllocator:171 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-03-19 20:48:49,239 DEBUG [main] PooledByteBufAllocator:172 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-03-19 20:48:49,239 DEBUG [main] PooledByteBufAllocator:173 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-03-19 20:48:49,239 DEBUG [main] PooledByteBufAllocator:174 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-03-19 20:48:49,247 DEBUG [main] ByteBufUtil:87 - -Dio.netty.allocator.type: pooled
+2022-03-19 20:48:49,247 DEBUG [main] ByteBufUtil:96 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-03-19 20:48:49,247 DEBUG [main] ByteBufUtil:99 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-03-19 20:48:49,933 DEBUG [Forwarding newSession on session null to remote] DefaultChannelId:79 - -Dio.netty.processId: 15068 (auto-detected)
+2022-03-19 20:48:49,934 DEBUG [Forwarding newSession on session null to remote] NetUtil:135 - -Djava.net.preferIPv4Stack: false
+2022-03-19 20:48:49,934 DEBUG [Forwarding newSession on session null to remote] NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+2022-03-19 20:48:49,944 DEBUG [Forwarding newSession on session null to remote] NetUtilInitializations:129 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-03-19 20:48:49,945 DEBUG [Forwarding newSession on session null to remote] NetUtil:187 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-03-19 20:48:49,967 DEBUG [Forwarding newSession on session null to remote] DefaultChannelId:101 - -Dio.netty.machineId: 6c:6a:77:ff:fe:8d:52:89 (auto-detected)
+2022-03-19 20:48:49,997 DEBUG [AsyncHttpClient-1-2] AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-03-19 20:48:49,998 DEBUG [AsyncHttpClient-1-2] AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-03-19 20:48:49,998 DEBUG [AsyncHttpClient-1-2] ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@6ad42c8a
+2022-03-19 20:48:50,018 DEBUG [AsyncHttpClient-1-2] Recycler:103 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-03-19 20:48:50,019 DEBUG [AsyncHttpClient-1-2] Recycler:104 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-03-19 20:48:50,019 DEBUG [AsyncHttpClient-1-2] Recycler:105 - -Dio.netty.recycler.linkCapacity: 16
+2022-03-19 20:48:50,019 DEBUG [AsyncHttpClient-1-2] Recycler:106 - -Dio.netty.recycler.ratio: 8
+2022-03-19 20:48:50,019 DEBUG [AsyncHttpClient-1-2] Recycler:107 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-03-19 20:48:50,573 DEBUG [AsyncHttpClient-1-2] Brotli:38 - brotli4j not in the classpath; Brotli support will be unavailable.
+2022-03-19 20:48:50,692 DEBUG [main] ThreadLocalRandom:214 - -Dio.netty.initialSeedUniquifier: 0x3e7e69eaaa717a0e
+2022-03-19 20:48:56,557 DEBUG [AsyncHttpClient-1-4] WebSocket08FrameEncoder:131 - Encoding WebSocket Frame opCode=8 length=26
+2022-03-19 20:49:03,722 DEBUG [AsyncHttpClient-1-7] WebSocket08FrameEncoder:131 - Encoding WebSocket Frame opCode=8 length=26
+2022-03-19 20:49:15,258 DEBUG [AsyncHttpClient-1-10] WebSocket08FrameEncoder:131 - Encoding WebSocket Frame opCode=8 length=26
+2022-03-19 20:49:23,793 DEBUG [AsyncHttpClient-1-13] WebSocket08FrameEncoder:131 - Encoding WebSocket Frame opCode=8 length=26
+2022-03-19 20:49:32,062 DEBUG [AsyncHttpClient-1-16] WebSocket08FrameEncoder:131 - Encoding WebSocket Frame opCode=8 length=26
+2022-03-19 20:49:40,728 DEBUG [AsyncHttpClient-1-3] WebSocket08FrameEncoder:131 - Encoding WebSocket Frame opCode=8 length=26
+2022-03-19 20:49:49,289 DEBUG [AsyncHttpClient-1-6] WebSocket08FrameEncoder:131 - Encoding WebSocket Frame opCode=8 length=26
+2022-03-19 20:50:00,387 DEBUG [AsyncHttpClient-1-9] WebSocket08FrameEncoder:131 - Encoding WebSocket Frame opCode=8 length=26
+2022-03-19 20:50:10,957 DEBUG [AsyncHttpClient-1-12] WebSocket08FrameEncoder:131 - Encoding WebSocket Frame opCode=8 length=26
+2022-03-19 20:50:40,510 DEBUG [AsyncHttpClient-1-15] WebSocket08FrameEncoder:131 - Encoding WebSocket Frame opCode=8 length=26
+2022-03-19 20:51:15,066 DEBUG [AsyncHttpClient-1-2] WebSocket08FrameEncoder:131 - Encoding WebSocket Frame opCode=8 length=26
+2022-03-19 20:51:40,351 DEBUG [main] cache:45 - Couldn't find template in cache for "index.ftl"("en", UTF-8, parsed); will try to load it.
+2022-03-19 20:51:40,352 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("index_en.ftl"): Not found
+2022-03-19 20:51:40,354 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("index.ftl"): Found
+2022-03-19 20:51:40,354 DEBUG [main] cache:45 - Loading template for "index.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Dinesh/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/index.ftl"
+2022-03-19 20:51:40,494 DEBUG [main] cache:45 - Couldn't find template in cache for "head.ftl"("en", UTF-8, parsed); will try to load it.
+2022-03-19 20:51:40,495 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("head_en.ftl"): Not found
+2022-03-19 20:51:40,495 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("head.ftl"): Found
+2022-03-19 20:51:40,496 DEBUG [main] cache:45 - Loading template for "head.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Dinesh/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/head.ftl"
+2022-03-19 20:51:40,498 DEBUG [main] cache:45 - Couldn't find template in cache for "nav.ftl"("en", UTF-8, parsed); will try to load it.
+2022-03-19 20:51:40,499 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("nav_en.ftl"): Not found
+2022-03-19 20:51:40,499 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("nav.ftl"): Found
+2022-03-19 20:51:40,499 DEBUG [main] cache:45 - Loading template for "nav.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Dinesh/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/nav.ftl"
+2022-03-19 20:51:40,506 DEBUG [main] cache:45 - Couldn't find template in cache for "test-view/test-view.ftl"("en", UTF-8, parsed); will try to load it.
+2022-03-19 20:51:40,507 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("test-view/test-view_en.ftl"): Not found
+2022-03-19 20:51:40,508 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("test-view/test-view.ftl"): Found
+2022-03-19 20:51:40,508 DEBUG [main] cache:45 - Loading template for "test-view/test-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Dinesh/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view.ftl"
+2022-03-19 20:51:40,520 DEBUG [main] cache:45 - Couldn't find template in cache for "test-view/test-view-charts.ftl"("en", UTF-8, parsed); will try to load it.
+2022-03-19 20:51:40,521 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("test-view/test-view-charts_en.ftl"): Not found
+2022-03-19 20:51:40,522 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("test-view/test-view-charts.ftl"): Found
+2022-03-19 20:51:40,522 DEBUG [main] cache:45 - Loading template for "test-view/test-view-charts.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Dinesh/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view-charts.ftl"
+2022-03-19 20:51:40,533 DEBUG [main] cache:45 - Couldn't find template in cache for "test-view/standard.ftl"("en", UTF-8, parsed); will try to load it.
+2022-03-19 20:51:40,534 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("test-view/standard_en.ftl"): Not found
+2022-03-19 20:51:40,534 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("test-view/standard.ftl"): Found
+2022-03-19 20:51:40,535 DEBUG [main] cache:45 - Loading template for "test-view/standard.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Dinesh/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/standard.ftl"
+2022-03-19 20:51:40,550 DEBUG [main] cache:45 - "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2022-03-19 20:51:40,551 DEBUG [main] cache:45 - "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2022-03-19 20:51:40,552 DEBUG [main] cache:45 - "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2022-03-19 20:51:40,554 DEBUG [main] cache:45 - "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2022-03-19 20:51:40,555 DEBUG [main] cache:45 - "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2022-03-19 20:51:40,557 DEBUG [main] cache:45 - "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2022-03-19 20:51:40,558 DEBUG [main] cache:45 - "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2022-03-19 20:51:40,559 DEBUG [main] cache:45 - "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2022-03-19 20:51:40,561 DEBUG [main] cache:45 - "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2022-03-19 20:51:40,562 DEBUG [main] cache:45 - "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2022-03-19 20:51:40,562 DEBUG [main] cache:45 - "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2022-03-19 20:51:40,563 DEBUG [main] cache:45 - Couldn't find template in cache for "category-view/category-view.ftl"("en", UTF-8, parsed); will try to load it.
+2022-03-19 20:51:40,563 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("category-view/category-view_en.ftl"): Not found
+2022-03-19 20:51:40,564 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("category-view/category-view.ftl"): Found
+2022-03-19 20:51:40,564 DEBUG [main] cache:45 - Loading template for "category-view/category-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Dinesh/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/category-view/category-view.ftl"
+2022-03-19 20:51:40,572 DEBUG [main] cache:45 - Couldn't find template in cache for "author-view/author-view.ftl"("en", UTF-8, parsed); will try to load it.
+2022-03-19 20:51:40,573 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("author-view/author-view_en.ftl"): Not found
+2022-03-19 20:51:40,574 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("author-view/author-view.ftl"): Found
+2022-03-19 20:51:40,574 DEBUG [main] cache:45 - Loading template for "author-view/author-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Dinesh/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/author-view/author-view.ftl"
+2022-03-19 20:51:40,578 DEBUG [main] cache:45 - Couldn't find template in cache for "exception-view/exception-view.ftl"("en", UTF-8, parsed); will try to load it.
+2022-03-19 20:51:40,579 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("exception-view/exception-view_en.ftl"): Not found
+2022-03-19 20:51:40,580 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("exception-view/exception-view.ftl"): Found
+2022-03-19 20:51:40,580 DEBUG [main] cache:45 - Loading template for "exception-view/exception-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Dinesh/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/exception-view/exception-view.ftl"
+2022-03-19 20:51:40,587 DEBUG [main] cache:45 - Couldn't find template in cache for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed); will try to load it.
+2022-03-19 20:51:40,588 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("dashboard-view/dashboard-view_en.ftl"): Not found
+2022-03-19 20:51:40,588 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("dashboard-view/dashboard-view.ftl"): Found
+2022-03-19 20:51:40,588 DEBUG [main] cache:45 - Loading template for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Dinesh/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/dashboard-view/dashboard-view.ftl"
+2022-03-19 20:51:40,594 DEBUG [main] cache:45 - Couldn't find template in cache for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed); will try to load it.
+2022-03-19 20:51:40,594 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view_en.ftl"): Not found
+2022-03-19 20:51:40,595 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view.ftl"): Found
+2022-03-19 20:51:40,595 DEBUG [main] cache:45 - Loading template for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Dinesh/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/logs-view/testrunner-logs-view.ftl"
