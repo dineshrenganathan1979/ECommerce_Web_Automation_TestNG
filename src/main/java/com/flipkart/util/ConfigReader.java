@@ -10,8 +10,7 @@ public class ConfigReader {
 	public static String getProperty(String propertyName) {
 	try {
 		prop = new Properties();
-		prop.load(new FileInputStream("D:/eclipse-workspace/Selenium_Demo_Project/src/test/resources/Config.properties"));
-	
+		prop.load(new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/Config.properties"));
 	}catch(Exception e) {
 		e.printStackTrace();
 	}

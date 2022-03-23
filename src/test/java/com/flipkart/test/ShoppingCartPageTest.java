@@ -53,7 +53,7 @@ public class ShoppingCartPageTest extends TestBase {
 		shoppingCartPage = productDetailsPage.addProductToShoppingCart();
 		Assert.assertEquals(shoppingCartPage.getSucessMessage(), SuccessMessage);
 		Assert.assertEquals(shoppingCartPage.getProductName(), ProductName);
-		Assert.assertEquals(shoppingCartPage.getProductQuantity(), Integer.parseInt(Quantity));
+		Assert.assertEquals(Integer.parseInt(shoppingCartPage.getProductQuantity()), Integer.parseInt(Quantity.trim()));
 		Assert.assertEquals(shoppingCartPage.getProductPrice(), ProductPrice);
 		Assert.assertTrue(shoppingCartPage.verifyContinueShoppingButton());
 		Assert.assertTrue(shoppingCartPage.verifyProceedtoCheckButton());

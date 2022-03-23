@@ -7,11 +7,12 @@
  </listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.flipkart.test.LoginPageTest"/>
+  	  <class name="com.flipkart.test.LoginPageTest"/>
       <class name="com.flipkart.test.AccountsPageTest"/>
       <class name="com.flipkart.test.WomenProductPageTest"/>
       <class name="com.flipkart.test.ShoppingCartPageTest"/>
       <class name="com.flipkart.test.OrderDetailsPageTest"/>
+      
     </classes>
     
  <!--<packages>  

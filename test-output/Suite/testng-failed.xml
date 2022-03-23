@@ -6,20 +6,6 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.flipkart.test.OrderDetailsPageTest">
-        <methods>
-          <include name="VerifyOrderDetailsPage"/>
-          <include name="initialize"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.flipkart.test.OrderDetailsPageTest -->
-      <class name="com.flipkart.test.ShoppingCartPageTest">
-        <methods>
-          <include name="verifyShoppingCartPage" invocation-numbers="0"/>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- com.flipkart.test.ShoppingCartPageTest -->
       <class name="com.flipkart.test.LoginPageTest">
         <methods>
           <include name="setUp"/>
