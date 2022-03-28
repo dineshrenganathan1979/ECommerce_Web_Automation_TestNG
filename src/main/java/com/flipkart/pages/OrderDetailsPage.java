@@ -30,6 +30,7 @@ public class OrderDetailsPage {
 	private By total_tax = By.cssSelector("td#total_tax");
 	private By total_price = By.cssSelector("span#total_price");
 	private By proceedToCheckoutButton = By.xpath("(//a[@title='Proceed to checkout'])[2]");
+
 	
 	public String getProductName() {
 		return driver.findElement(productName).getText();
@@ -90,6 +91,11 @@ public class OrderDetailsPage {
 	
 	public boolean isProductNameDisplayedInProductIamge(String productName) {
 		return driver.findElement(productImage).getAttribute("alt").contains(productName);
+	}
+	
+	public OrderShippingPage navigateToOrderShippingPage() {
+		driver.findElement(proceedToCheckoutButton).click();
+		return new OrderShippingPage(driver);
 	}
 	
 }

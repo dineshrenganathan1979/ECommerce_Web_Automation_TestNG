@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import com.flipkart.base.TestBase;
 
-public class LoginPage extends TestBase {
+public class LoginPage  {
 	WebDriver driver;
 	
 	//Locators

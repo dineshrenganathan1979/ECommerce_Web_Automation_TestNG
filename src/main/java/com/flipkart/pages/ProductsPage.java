@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.flipkart.base.TestBase;
 
-public class ProductsPage extends TestBase {
+public class ProductsPage  {
 	
 	WebDriver driver;
 	
